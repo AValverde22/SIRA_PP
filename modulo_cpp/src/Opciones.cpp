@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <string>
 #include <iomanip>
+#include <iostream>
 
 void guardarTodosLosCSV(const vector<CursoClass::Curso>& c, const vector<PrerrequisitoClass::Prerrequisito>& p, const vector<HistorialClass::Historial>& h, const vector<InteresClass::Interes>& i, bool inicial) {
     CursoClass::generarCSVCursos(c);
@@ -48,8 +49,7 @@ void mostrarHistorial(const vector<HistorialClass::Historial>& lista) {
             encontrado = true;
         }
     }
-    if (!encontrado) cout << "\nNo se encontraron registros para este estudiante.\n"; return;
-
+    if (!encontrado) cout << "\nNo se encontraron registros para este estudiante.\n";
     Util::regresar();
 }
 
@@ -57,7 +57,7 @@ void reporteGeneral(const vector<HistorialClass::Historial>& historial, const ve
     system("cls");
     string id;
     cout << "\n ================= REPORTE GENERAL ================= \n";
-    cout << "Ingrese ID del Estudiante: "; cin >> id;
+    cout << " Ingrese ID del Estudiante: "; cin >> id;
 
     int aprobados = 0, desaprobados = 0;
     int sumaNotas = 0, cantidadCursos = 0;
@@ -94,14 +94,14 @@ void reporteGeneral(const vector<HistorialClass::Historial>& historial, const ve
 
     float promedio = (float)sumaNotas / cantidadCursos;
 
-    cout << "\nEstudiante: " << id << "\n";
+    cout << "\n   Estudiante: " << id << "\n";
     cout << fixed << setprecision(1); // Formato para un decimal
-    cout << "Promedio general: " << promedio << "\n";
-    cout << "Cursos aprobados: " << aprobados << "\n";
-    cout << "Cursos desaprobados: " << desaprobados << "\n";
-    cout << "Curso con mayor nota: " << nombreMax << " (" << notaMax << ")\n";
-    cout << "Curso con menor nota: " << nombreMin << " (" << notaMin << ")\n";
-    cout << " ================================================== ";
+    cout << "   Promedio general: " << promedio << "\n";
+    cout << "   Cursos aprobados: " << aprobados << "\n";
+    cout << "   Cursos desaprobados: " << desaprobados << "\n";
+    cout << "   Curso con mayor nota: " << nombreMax << " (" << notaMax << ")\n";
+    cout << "   Curso con menor nota: " << nombreMin << " (" << notaMin << ")\n";
+    cout << " ==================================================\n";
     Util::regresar();
 }
 

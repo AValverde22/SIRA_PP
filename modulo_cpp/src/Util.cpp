@@ -7,7 +7,7 @@
 using namespace std;
 
 void Util::regresar() {
-    cout << "Presione enter para continuar... ";
+    cout << "\nPresione enter para continuar... ";
     cin.get();
     cin.get();
 }
