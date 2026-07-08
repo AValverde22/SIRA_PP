@@ -1,15 +1,15 @@
-#include <windows.h>
 #include <iostream>
 #include <string>
 #include <unistd.h>
 #include <vector>
 
-#include "Banner.h"
-#include "CursoClass.h"
-#include "HistorialClass.h"
-#include "InteresClass.h"
-#include "PrerrequisitoClass.h"
-#include "Opciones.h"
+
+#include "../include/Banner.h"
+#include "../include/CursoClass.h"
+#include "../include/HistorialClass.h"
+#include "../include/InteresClass.h"
+#include "../include/PrerrequisitoClass.h"
+#include "../include/Opciones.h"
 
 using namespace std;
 
