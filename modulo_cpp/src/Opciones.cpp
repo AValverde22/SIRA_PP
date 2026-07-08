@@ -1,7 +1,7 @@
 #include "Opciones.h"
 #include "Util.h"
 
-#include <windows.h>
+
 #include <unistd.h>
 #include <string>
 #include <iomanip>

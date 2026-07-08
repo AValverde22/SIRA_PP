@@ -1,8 +1,8 @@
 #include "Banner.h"
-
+#include <thread>
+#include <chrono>
 #include <iostream>
 #include <string>
-#include <windows.h>
 #include <unistd.h>
 
 using namespace std;
@@ -29,7 +29,7 @@ void Banner::imprimirBannerGrande() {
     for (int i = 0; i < 12; i++) {
         banner_grande();
         loading(i);
-        usleep(250000);
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         system("cls");
     }
 }
