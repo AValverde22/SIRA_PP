@@ -1,3 +1,4 @@
+
 type Registro = (String, String, Int)
 
 separar_texto :: Char -> String -> [String]
@@ -63,7 +64,7 @@ obtenerCodigos registros =
 unirCursos :: [String] -> String
 unirCursos [] = "Ninguno"
 unirCursos [curso] = curso
-unirCursos (curso:resto) =  curso ++ ", " ++ unirCursos resto
+unirCursos (curso:resto_de_cursos) =  curso ++ ", " ++ unirCursos resto_de_cursos
 
 redondear :: Double -> Double
 redondear numero = fromIntegral (round (numero * 100)) / 100
