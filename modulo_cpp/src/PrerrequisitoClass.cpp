@@ -5,6 +5,7 @@
 #include "PrerrequisitoClass.h"
 #include <fstream>
 
+// Exporta la lista de prerrequisitos de cursos a un archivo CSV llamado "prerrequisitos.csv" en el directorio "data".
 void PrerrequisitoClass::generarCSVPrerrequisitos(const vector<Prerrequisito>& lista) {
     ofstream archivo("../../data/prerrequisitos.csv");
     if (archivo.is_open()) {

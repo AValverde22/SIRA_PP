@@ -6,12 +6,14 @@
 
 using namespace std;
 
+// Pausa la ejecución del programa hasta que el usuario presione la tecla Enter para continuar.
 void Util::regresar() {
     cout << "\nPresione enter para continuar... ";
     cin.get();
     cin.get();
 }
 
+// Limpia la pantalla e imprime un menú o conjunto de cadenas pasadas como arreglo.
 void Util::imprimir(string pantalla[], int size) {
     system("cls");
     cout << endl;
@@ -19,6 +21,7 @@ void Util::imprimir(string pantalla[], int size) {
     cout << endl;
 }
 
+// Solicita y valida la entrada numérica del usuario dentro de un rango específico, reimprimiendo el menú si hay error.
 int Util::devolverInput(string pantalla[], int size, int max) {
     int opcion = 0;
 

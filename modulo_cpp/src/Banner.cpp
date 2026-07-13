@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// Imprime el título grande "SIRA" en formato ASCII.
 void Banner::banner_grande() {
     cout << endl;
     cout << "  /$$$$$$  /$$$$$$ /$$$$$$$   /$$$$$$" << endl;
@@ -20,16 +21,18 @@ void Banner::banner_grande() {
     cout << endl;
 }
 
+// Imprime una animación de "Cargando" con puntos suspensivos según la posición.
 void Banner::loading(int pos) {
     string puntos[4] = {"    ", ".   ", "..  ", "... "};
     cout << "Cargando" << *(puntos + (pos % 4)) << endl;
 }
 
+// Ejecuta la animación combinada del banner y el mensaje de carga, limpiando la pantalla iterativamente.
 void Banner::imprimirBannerGrande() {
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 8; i++) {
         banner_grande();
         loading(i);
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
         system("cls");
     }
 }

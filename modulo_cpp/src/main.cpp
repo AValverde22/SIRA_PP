@@ -13,6 +13,7 @@
 
 using namespace std;
 
+// Punto de entrada del programa. Inicializa los datos de ejemplo, muestra el banner de bienvenida y lanza el menú de opciones del sistema.
 int main() {
     vector<CursoClass::Curso> cursos = {
         {"CS101", "Programacion I", "Programacion", 4}, {"CS102", "Programacion II", "Programacion", 4},
