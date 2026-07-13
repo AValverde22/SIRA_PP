@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <iostream>
 
+// Llama a las funciones correspondientes para exportar todos los datos (cursos, prerrequisitos, historial, intereses) a archivos CSV.
 void guardarTodosLosCSV(const vector<CursoClass::Curso>& c, const vector<PrerrequisitoClass::Prerrequisito>& p, const vector<HistorialClass::Historial>& h, const vector<InteresClass::Interes>& i, bool inicial) {
     CursoClass::generarCSVCursos(c);
     PrerrequisitoClass::generarCSVPrerrequisitos(p);
@@ -19,6 +20,7 @@ void guardarTodosLosCSV(const vector<CursoClass::Curso>& c, const vector<Prerreq
 }
 
 // 3. REGISTRO
+// Solicita al usuario los datos para registrar temporalmente una nueva nota en el historial académico.
 void registrarNota(vector<HistorialClass::Historial>& lista) {
     system("cls");
     HistorialClass::Historial h;
@@ -33,6 +35,7 @@ void registrarNota(vector<HistorialClass::Historial>& lista) {
 }
 
 // 4. CONSULTA Y REPORTE
+// Solicita el ID de un estudiante y muestra en pantalla todos los cursos y notas registrados en su historial.
 void mostrarHistorial(const vector<HistorialClass::Historial>& lista) {
     system("cls");
     string id;
@@ -53,6 +56,7 @@ void mostrarHistorial(const vector<HistorialClass::Historial>& lista) {
     Util::regresar();
 }
 
+// Genera y muestra un reporte detallado del desempeño de un estudiante, incluyendo promedio, cursos aprobados/desaprobados, y notas extremas.
 void reporteGeneral(const vector<HistorialClass::Historial>& historial, const vector<CursoClass::Curso>& cursos) {
     system("cls");
     string id;
@@ -105,6 +109,7 @@ void reporteGeneral(const vector<HistorialClass::Historial>& historial, const ve
     Util::regresar();
 }
 
+// Constructor que inicializa el menú principal interactivo del sistema, gestionando las opciones seleccionadas por el usuario.
 Opciones::Opciones(vector<CursoClass::Curso>& c, vector<PrerrequisitoClass::Prerrequisito>& p, vector<HistorialClass::Historial>& h, vector<InteresClass::Interes>& i) {
     // Generar CSV iniciales al abrir el programa
     guardarTodosLosCSV(c, p, h, i, true);
